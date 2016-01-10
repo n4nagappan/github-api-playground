@@ -3,17 +3,17 @@
     <head>
         <meta charset="utf-8">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+        <script src="js/codemirror.js"></script>
+        <link rel="stylesheet" href="stylesheets/codemirror.css">
+        <link rel="stylesheet" href="stylesheets/main.css">
+        <script src="codemirror-5.10/mode/javascript/javascript.js"></script>
         <script src="js/main.js"></script>
     </head>
     <body>
-        <input type="text" name="username">
-        <select>
-          <option value="stars">Get Starrers</option>
-          <option value="followers">Get Followers</option>
-          <option value="following">Get Following</option>
-        </select>
-        <br>
-        <textarea id="output" rows="30" cols="50">
+        <input id="urlbox" type="text">
+        <button onclick="sendRequest()">Execute</button>
+        <br/>
+        <textarea id="output" rows="100" cols="50">
         </textarea>
     </body>
 </html>

@@ -1,10 +1,23 @@
+var editor;
 $(document).ready(function(){
-    $.get('/starrers', function(data){
-        //console.log(data);
+    $('#urlbox').keypress(function(e){
+        if(e.keyCode==13)
+        sendRequest();
+    });
+    var myTextArea = document.getElementById('output');
+    editor = CodeMirror.fromTextArea(myTextArea, {
+        lineNumbers: true
+    });
+});
+
+function sendRequest(){
+    var url = $('#urlbox').val();
+    console.log(url);
+    $.get('/exec?url=' + url , function(data){
         var data = JSON.parse(data);
-        $('#output').val(JSON.stringify(data));
+        editor.setValue(JSON.stringify(data, null, 2));
         data.forEach(function(i){
             console.log(i);
         });
     });
-});
+}
