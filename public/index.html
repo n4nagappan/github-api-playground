@@ -3,6 +3,8 @@
     <head>
         <meta charset="utf-8">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/foundation/6.1.1/foundation.min.css">
+        <script src="https://cdn.jsdelivr.net/foundation/6.1.1/foundation.min.js"></script>
         <script src="js/codemirror.js"></script>
         <link rel="stylesheet" href="stylesheets/codemirror.css">
         <link rel="stylesheet" href="stylesheets/main.css">
@@ -10,8 +12,18 @@
         <script src="js/main.js"></script>
     </head>
     <body>
-        <input id="urlbox" type="text">
-        <button onclick="sendRequest()">Execute</button>
+            <div class="row">
+                <div class="large-12 columns">
+                    <div class="row collapse">
+                        <div class="small-10 columns">
+                            <input id="urlbox" type="text" value="/users/n4nagappan">
+                        </div>
+                        <div class="small-2 columns">
+                            <a href="#" onclick="sendRequest()" class="button postfix">Execute</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
         <br/>
         <textarea id="output" rows="100" cols="50">
         </textarea>
