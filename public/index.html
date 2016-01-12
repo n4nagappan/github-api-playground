@@ -3,8 +3,9 @@
     <head>
         <meta charset="utf-8">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/foundation/6.1.1/foundation.min.css">
-        <script src="https://cdn.jsdelivr.net/foundation/6.1.1/foundation.min.js"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/foundation/5.0.3/css/foundation.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/foundation/5.0.3/css/normalize.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/foundation/5.0.3/js/foundation.min.js"></script>
         <script src="js/codemirror.js"></script>
         <link rel="stylesheet" href="stylesheets/codemirror.css">
         <link rel="stylesheet" href="stylesheets/main.css">
@@ -12,21 +13,28 @@
         <script src="js/main.js"></script>
     </head>
     <body>
-            <div class="row">
-                <div class="large-12 columns">
-                    <div class="row collapse">
-                        <div class="small-10 columns">
-                            <input id="urlbox" type="text" value="/users/n4nagappan">
+        <div class="app">
+            <div class="row fullwidth" data-equalizer>
+                <div id="left-panel" class="app-col large-3 columns" data-equalizer-watch>
+                    <div class="row fullwidth"> 
+                        <div class="row collapse">
+                            <div class="small-10 columns">
+                                <input id="urlbox" type="text" value="/users/n4nagappan">
+                            </div>
+                            <div class="small-2 columns">
+                                <a href="#" id="execute" class="button postfix">Execute</a>
+                            </div>
                         </div>
-                        <div class="small-2 columns">
-                            <a href="#" onclick="sendRequest()" class="button postfix">Execute</a>
-                        </div>
+                    </div> 
+                </div>
+                <div class="app-col large-9 columns" style="background-color:green;">
+                    <div class="row">
+                        <textarea id="output" rows="100" cols="50">
+                        </textarea>
                     </div>
                 </div>
-            </div>
-        <br/>
-        <textarea id="output" rows="100" cols="50">
-        </textarea>
+            </div>            
+        </div>
     </body>
 </html>
 
