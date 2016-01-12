@@ -13,7 +13,7 @@ $(document).ready(function(){
 
     //$('#urlbox').click(function(){
     //    var pos = $("#urlbox").getCursorPosition();
-    //    var text = $("#urlbox").html();
+    //    var text = $("#urlbox").val();
     //    console.log("pos : " + pos);
     //    var start = text.
     //    createSelection( document.getElementById('urlbox') , pos , pos+4);
@@ -21,7 +21,7 @@ $(document).ready(function(){
 
     $('#urlbox').keypress(function(e){
         if(e.keyCode==13){
-            var url = $("#urlbox").html();
+            var url = $("#urlbox").val();
             sendRequest(url);
         }
     });
@@ -38,11 +38,11 @@ $(document).ready(function(){
 
     $(".api").click(function(e){
         var url = $(e.target).html();
-        $('#urlbox').attr('value', url);
+        $('#urlbox').val(url);
     });
 
     $("#execute").click(function(e){
-        var url = $("#urlbox").html();
+        var url = $("#urlbox").val();
         sendRequest(url);
     });
 });
