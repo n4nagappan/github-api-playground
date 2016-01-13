@@ -25,6 +25,8 @@ $(document).ready(function(){
             sendRequest(url);
         }
     });
+    
+
 
     var myTextArea = document.getElementById('output');
     editor = CodeMirror.fromTextArea(myTextArea, {
